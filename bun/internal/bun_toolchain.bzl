@@ -2,7 +2,7 @@
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
-load("@bazel_tools//platforms/common:platform_common.bzl", "ToolchainInfo")
+load("@bazel_tools//platforms:platform_common.bzl", "ToolchainInfo")
 
 _BUILD_FILE_CONTENT = """\
 load("@rules_bun//bun/internal:bun_toolchain.bzl", "bun_toolchain")
