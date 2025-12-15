@@ -84,9 +84,6 @@ bun_binary = rule(
         "deps": attr.label_list(
             doc = "Dependencies",
         ),
-        "args": attr.string_list(
-            doc = "Arguments to pass to the entry point",
-        ),
         "data": attr.label_list(
             allow_files = True,
             doc = "Data files to include in runfiles",

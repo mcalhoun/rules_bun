@@ -17,5 +17,5 @@ def register_bun_toolchains(version = None):
         version = version,
     )
     
-    native.register_toolchains("@rules_bun//toolchains:bun_toolchain")
+    native.register_toolchains("@rules_bun//toolchains:bun_toolchain_impl")
 

@@ -11,3 +11,10 @@ bun_toolchain(
     bun_version = BUN_VERSION,
     visibility = ["//visibility:public"],
 )
+
+# Register the toolchain
+toolchain(
+    name = "bun_toolchain_impl",
+    toolchain = ":bun_toolchain",
+    toolchain_type = "@rules_bun//bun:toolchain_type",
+)

@@ -109,6 +109,10 @@ bun_bundle = rule(
             values = ["none", "inline", "external"],
             doc = "Source map generation",
         ),
+        "minify": attr.bool(
+            default = False,
+            doc = "Whether to minify the output",
+        ),
         "external": attr.string_list(
             doc = "External dependencies to exclude from bundle",
         ),

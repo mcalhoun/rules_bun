@@ -97,7 +97,7 @@ exit ${{TEST_EXIT_CODE:-0}}
         test_output_path = test_output.short_path,
         test_files = test_files_str,
         test_name = ctx.label.name,
-        timeout = ctx.attr.timeout or "30000",
+        timeout = getattr(ctx.attr, "timeout", "moderate") or "30000",
         test_filter = "--test-name-pattern " + ctx.attr.test_filter if ctx.attr.test_filter else "",
         env_vars = "\n".join([
             "export {}={}".format(k, v)
@@ -144,25 +144,8 @@ bun_test = rule(
         "env": attr.string_dict(
             doc = "Environment variables for the test",
         ),
-        "timeout": attr.string(
-            default = "moderate",
-            values = ["short", "moderate", "long", "eternal"],
-            doc = "Test timeout",
-        ),
         "test_filter": attr.string(
             doc = "Filter tests by name pattern",
-        ),
-        "size": attr.string(
-            default = "medium",
-            values = ["small", "medium", "large", "enormous"],
-            doc = "Test size",
-        ),
-        "tags": attr.string_list(
-            doc = "Test tags",
-        ),
-        "flaky": attr.bool(
-            default = False,
-            doc = "Whether the test is flaky",
         ),
     },
     toolchains = ["@rules_bun//bun:toolchain_type"],

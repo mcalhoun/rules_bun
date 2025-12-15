@@ -2,7 +2,13 @@
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
-load("@bazel_tools//platforms:platform_common.bzl", "ToolchainInfo")
+
+# ToolchainInfo is a built-in provider in Bazel
+# In Bazel 7.0.0, it's available as a function that creates a provider
+ToolchainInfo = provider(
+    doc = "Information about a Bun toolchain",
+    fields = ["bun_binary", "bun_version"],
+)
 
 _BUILD_FILE_CONTENT = """\
 load("@rules_bun//bun/internal:bun_toolchain.bzl", "bun_toolchain")
