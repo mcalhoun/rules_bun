@@ -88,6 +88,7 @@ bun_test(
 Run with: `bazel test //:calculator_test`
 
 The `bun_test` rule supports:
+
 - Both Bun's native test API (`test()`, `describe()`, `expect()`)
 - Jest-compatible API (`it()`, `describe()`, `expect()`)
 - Full Bazel test framework integration (XML output, test discovery, filtering, sharding, coverage)
@@ -229,21 +230,9 @@ bun_bundle(
 
 ## Platform Support
 
-- Linux (x86_64, aarch64)
-- macOS (x86_64, aarch64)
-- Windows (x86_64)
-
-## Next.js Support
-
-Planned support for Next.js applications is documented in [PLAN_NEXTJS.md](PLAN_NEXTJS.md). This will include:
-
-- `nextjs_app`: Define and build Next.js applications
-- `nextjs_dev`: Run Next.js development server with Bun
-- `nextjs_build`: Build Next.js applications for production
-- `nextjs_start`: Run Next.js production server
-- `nextjs_export`: Generate static exports
-
-Support for both Pages Router and App Router (Next.js 13+) will be included.
+- Linux (x86_64/amd64, aarch64/arm64)
+- macOS (x86_64/amd64 for Intel, aarch64/arm64 for Apple Silicon)
+- Windows (x86_64/amd64)
 
 ## Contributing
 
@@ -252,4 +241,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing to rules_b
 ## License
 
 Apache 2.0
-

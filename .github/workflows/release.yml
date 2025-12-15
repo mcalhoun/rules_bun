@@ -9,15 +9,15 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.1
 
       - name: Set up Bazel
-        uses: bazel-contrib/setup-bazel@v0
+        uses: bazel-contrib/setup-bazel@0.15.0
         with:
           bazelisk-version: "latest"
 
       - name: Create release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.5.0
         with:
           generate_release_notes: true
 
