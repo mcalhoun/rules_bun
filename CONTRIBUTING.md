@@ -5,12 +5,14 @@ Thank you for your interest in contributing to rules_bun!
 ## Development Setup
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/mcalhoun/rules_bun.git
    cd rules_bun
    ```
 
 2. Install pre-commit hooks:
+
    ```bash
    pre-commit install
    ```
@@ -45,4 +47,3 @@ Thank you for your interest in contributing to rules_bun!
 ## Questions?
 
 Open an issue or start a discussion on GitHub.
-
