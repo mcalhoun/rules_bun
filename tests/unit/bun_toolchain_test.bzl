@@ -1,7 +1,7 @@
 """Unit tests for bun_toolchain."""
 
 load("@bazel_skylib//lib:unittest.bzl", "asserts", "unittest")
-load("//bun:internal/bun_toolchain.bzl", "bun_repository")
+load("//bun/internal:bun_toolchain.bzl", "bun_repository")
 
 def _bun_toolchain_test_impl(ctx):
     """Test implementation for bun_toolchain."""

@@ -1,6 +1,6 @@
 # BUILD file for toolchains
 
-load("@rules_bun//bun:internal/bun_toolchain.bzl", "bun_toolchain")
+load("@rules_bun//bun/internal:bun_toolchain.bzl", "bun_toolchain")
 load("//toolchains:bun_toolchain.bzl", "BUN_VERSION")
 
 package(default_visibility = ["//visibility:public"])

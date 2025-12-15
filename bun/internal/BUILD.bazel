@@ -1,0 +1,4 @@
+# BUILD file for bun/internal package
+
+package(default_visibility = ["//visibility:public"])
+
