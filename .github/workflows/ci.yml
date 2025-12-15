@@ -23,7 +23,7 @@ jobs:
             - name: Set up Bazel
               uses: bazel-contrib/setup-bazel@0.15.0
               with:
-                  bazelisk-version: "latest"
+                  bazelisk-version: "1.27.0"
 
             - name: Run tests
               run: bazel test //tests/... //examples/...
