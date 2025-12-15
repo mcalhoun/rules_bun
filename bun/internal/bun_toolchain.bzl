@@ -2,7 +2,7 @@
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
-load("@bazel_tools//platforms:platform_common.bzl", "platform_common")
+# ToolchainInfo is available directly in Bazel, no import needed
 
 _BUILD_FILE_CONTENT = """\
 load("@rules_bun//bun:internal/bun_toolchain.bzl", "bun_toolchain")
@@ -111,7 +111,7 @@ def _bun_toolchain_impl(ctx):
     bun_binary = ctx.file.bun_binary
     
     return [
-        platform_common.ToolchainInfo(
+        ToolchainInfo(
             bun_binary = bun_binary,
             bun_version = ctx.attr.bun_version,
         ),

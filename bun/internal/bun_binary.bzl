@@ -1,7 +1,6 @@
 """bun_binary rule implementation."""
 
 load("@bazel_skylib//lib:paths.bzl", "paths")
-load("@bazel_tools//platforms:platform_common.bzl", "platform_common")
 
 def _get_bun_toolchain(ctx):
     """Get the Bun toolchain from the current context."""

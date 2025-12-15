@@ -1,8 +1,6 @@
 """bun_test rule implementation with full Bazel test framework integration."""
 
 load("@bazel_skylib//lib:paths.bzl", "paths")
-load("@bazel_tools//platforms:platform_common.bzl", "platform_common")
-load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 
 def _get_bun_toolchain(ctx):
     """Get the Bun toolchain from the current context."""
