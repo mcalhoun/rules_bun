@@ -5,7 +5,7 @@ load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 load("@bazel_tools//platforms:platform_common.bzl", "platform_common")
 
 _BUILD_FILE_CONTENT = """\
-load("@rules_bun//bun/internal:bun_toolchain.bzl", "bun_toolchain")
+load("@rules_bun//bun:internal/bun_toolchain.bzl", "bun_toolchain")
 
 package(default_visibility = ["//visibility:public"])
 

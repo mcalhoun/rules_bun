@@ -1,6 +1,6 @@
 """Bun toolchain registration."""
 
-load("//bun/internal:bun_toolchain.bzl", "bun_repository", "bun_toolchain")
+load("//bun:internal/bun_toolchain.bzl", "bun_repository", "bun_toolchain")
 load("//toolchains:bun_toolchain.bzl", "BUN_TOOLCHAIN_NAME", "BUN_VERSION")
 
 def register_bun_toolchains(version = None):
