@@ -8,8 +8,8 @@ load("//bun:internal/bun_test.bzl", _bun_test = "bun_test")
 load("//bun:internal/bun_build.bzl", _bun_build = "bun_build")
 load("//bun:internal/bun_install.bzl", _bun_install = "bun_install")
 load("//bun:internal/bun_bundle.bzl", _bun_bundle = "bun_bundle")
-load("//bun/toolchain.bzl", _register_bun_toolchains = "register_bun_toolchains")
-load("//bun/repositories.bzl", _rules_bun_dependencies = "rules_bun_dependencies")
+load("//bun:toolchain.bzl", _register_bun_toolchains = "register_bun_toolchains")
+load("//bun:repositories.bzl", _rules_bun_dependencies = "rules_bun_dependencies")
 
 # Re-export all rules
 bun_binary = _bun_binary
