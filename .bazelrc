@@ -2,7 +2,6 @@
 
 # Build settings
 build --incompatible_use_python_toolchains
-build --incompatible_restrict_named_params
 
 # Test settings
 test --test_output=errors
