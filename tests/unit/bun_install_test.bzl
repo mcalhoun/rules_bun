@@ -16,4 +16,3 @@ bun_install_rule_test = unittest.make(_bun_install_rule_test_impl)
 def bun_install_test_suite(name):
     """Test suite for bun_install."""
     bun_install_rule_test(name = name + "_test")
-

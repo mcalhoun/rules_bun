@@ -3,4 +3,3 @@ bazel-*/
 .bazel/
 *.lockb
 *.lock
-

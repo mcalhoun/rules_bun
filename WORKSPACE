@@ -23,4 +23,3 @@ rules_bun_dependencies()
 load("//bun:toolchain.bzl", "register_bun_toolchains")
 
 register_bun_toolchains()
-

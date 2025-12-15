@@ -19,4 +19,3 @@ bun_toolchain_test = unittest.make(_bun_toolchain_test_impl)
 def bun_toolchain_test_suite(name):
     """Test suite for bun_toolchain."""
     bun_toolchain_test(name = name + "_test")
-
