@@ -2,7 +2,7 @@
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
-# ToolchainInfo is available directly in Bazel, no import needed
+# ToolchainInfo is a built-in provider in Bazel
 
 _BUILD_FILE_CONTENT = """\
 load("@rules_bun//bun/internal:bun_toolchain.bzl", "bun_toolchain")
