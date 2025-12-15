@@ -1,0 +1,4 @@
+# Integration tests for cross-platform compatibility
+
+package(default_visibility = ["//visibility:public"])
+

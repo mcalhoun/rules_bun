@@ -1,0 +1,13 @@
+load("@rules_bun//bun:bun.bzl", "bun_bundle")
+
+bun_bundle(
+    name = "app_bundle",
+    entry_point = "src/app.js",
+    srcs = ["src/app.js", "src/utils.js"],
+    format = "esm",
+    target = "browser",
+    minify = True,
+    sourcemap = "external",
+    visibility = ["//visibility:public"],
+)
+

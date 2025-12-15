@@ -1,0 +1,8 @@
+load("@rules_bun//bun:bun.bzl", "bun_install")
+
+bun_install(
+    name = "install",
+    package_json = "package.json",
+    visibility = ["//visibility:public"],
+)
+

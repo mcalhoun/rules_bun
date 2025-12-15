@@ -1,0 +1,10 @@
+load("@rules_bun//bun:bun.bzl", "bun_test")
+
+bun_test(
+    name = "calculator_test",
+    srcs = ["calculator.test.js"],
+    size = "small",
+    tags = ["unit"],
+    visibility = ["//visibility:public"],
+)
+

@@ -1,0 +1,4 @@
+# Root BUILD file for rules_bun
+
+package(default_visibility = ["//visibility:public"])
+

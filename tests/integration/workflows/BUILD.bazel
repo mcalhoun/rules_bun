@@ -1,0 +1,4 @@
+# Integration tests for full workflows
+
+package(default_visibility = ["//visibility:public"])
+

@@ -1,0 +1,4 @@
+# BUILD file for tests
+
+package(default_visibility = ["//visibility:public"])
+

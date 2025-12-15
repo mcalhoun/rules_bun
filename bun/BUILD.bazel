@@ -1,0 +1,8 @@
+# BUILD file for bun rules
+
+load("//bun:toolchain_type.bzl", _toolchain_type = "toolchain_type")
+
+package(default_visibility = ["//visibility:public"])
+
+_toolchain_type(name = "toolchain_type")
+

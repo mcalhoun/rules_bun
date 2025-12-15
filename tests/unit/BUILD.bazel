@@ -1,0 +1,16 @@
+load("//tests/unit:bun_toolchain_test.bzl", "bun_toolchain_test_suite")
+load("//tests/unit:bun_binary_test.bzl", "bun_binary_test_suite")
+load("//tests/unit:bun_test_test.bzl", "bun_test_test_suite")
+load("//tests/unit:bun_build_test.bzl", "bun_build_test_suite")
+load("//tests/unit:bun_install_test.bzl", "bun_install_test_suite")
+load("//tests/unit:bun_bundle_test.bzl", "bun_bundle_test_suite")
+
+package(default_visibility = ["//visibility:public"])
+
+bun_toolchain_test_suite(name = "bun_toolchain")
+bun_binary_test_suite(name = "bun_binary")
+bun_test_test_suite(name = "bun_test")
+bun_build_test_suite(name = "bun_build")
+bun_install_test_suite(name = "bun_install")
+bun_bundle_test_suite(name = "bun_bundle")
+

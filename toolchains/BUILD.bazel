@@ -1,0 +1,13 @@
+# BUILD file for toolchains
+
+load("@rules_bun//bun/internal:bun_toolchain.bzl", "bun_toolchain")
+load("//toolchains:bun_toolchain.bzl", "BUN_VERSION")
+
+package(default_visibility = ["//visibility:public"])
+
+bun_toolchain(
+    name = "bun_toolchain",
+    bun_binary = "@bun//:bun_binary",
+    bun_version = BUN_VERSION,
+    visibility = ["//visibility:public"],
+)

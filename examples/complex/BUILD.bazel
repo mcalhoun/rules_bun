@@ -1,0 +1,30 @@
+load("@rules_bun//bun:bun.bzl", "bun_binary", "bun_test", "bun_build")
+
+# Library module
+bun_build(
+    name = "math_lib",
+    entry_point = "src/math.js",
+    srcs = ["src/math.js"],
+    format = "esm",
+    visibility = ["//visibility:public"],
+)
+
+# Main application
+bun_binary(
+    name = "main",
+    entry_point = "src/main.js",
+    srcs = ["src/main.js", "src/math.js", "src/greet.js"],
+    deps = [":math_lib"],
+    visibility = ["//visibility:public"],
+)
+
+# Tests
+bun_test(
+    name = "math_test",
+    srcs = ["src/math.test.js"],
+    deps = [":math_lib"],
+    size = "small",
+    tags = ["unit"],
+    visibility = ["//visibility:public"],
+)
+
