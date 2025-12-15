@@ -11,3 +11,6 @@ bun_toolchain(
     bun_version = BUN_VERSION,
     visibility = ["//visibility:public"],
 )
+
+# Register the toolchain
+register_toolchains(":bun_toolchain")
